@@ -1,0 +1,48 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+form {
+    max-width: 600px;
+    margin: 0 auto;
+}
+.body_main {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    background-image: url("../../pictures/homepage.jpg")
+}
+
+.head, 
+.maintxt {
+    text-align: center;
+    color: #fff;
+}
+
+.text_input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    box-sizing: border-box;
+}
+.text_input:hover {
+    box-shadow: 5px 50 px 10 px 10 px #ccc;
+}
+
+.buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin: 0 auto;
+    
+    margin-top: 20px;
+}
+
