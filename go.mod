@@ -1,3 +1,3 @@
-module ascii-art-web-stylize
+module web
 
 go 1.20

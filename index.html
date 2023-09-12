@@ -1,31 +1,40 @@
+ 
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ASCII Art Web</title>
-    <link rel="stylesheet" href="/ui/static/css/style.css">
-</head>
-<body class="body_main">
-    <div class="head">
-        <div class="maintxt">
-            <h1>ASCII_ART_WEB</h1>
-            <form id="acsiiForm" method="POST" action="/acsii-art">
-                <textarea class="text_input" name="inputValue" placeholder="Text Input"></textarea>
-                <div class="buttons">
-                    <input class="submit_button" type="submit" value="Get Result">  
-                    <select class="banner_button" name="banner" id="banner">
-                        <option class="option_standard" value="standard">Standard</option>
-                    </select>
-                </div>
-                <div class="buttons">
-                    <input class="export-button" type="submit" value="Export File" formaction="/export">
-                </div>
-            </form>
+<html>
+    <head>
+        <title>Ascii-art-web</title>
+        <link rel="stylesheet" type="text/css" href="css/style.css">
+        <link rel="icon" href="data:;base64,iVBORw0KGgo=">
+    </head>
+    <body>
+        <div class="container">
+        <div class="head-title">
+            <h1>Ascii-art-web</h1>
         </div>
-    </div>
-    
+        <div align = "center">
+            <form method="Post" action="index.html">
+                <div class="form-section">
+                    <div class = "radio"  >
+                        <input type="radio" id="contactChoice1" name="banner" value="standard" class="banner" checked>
+                        <label for="contactChoice1" >standard</label>
+                        <input type="radio" id="contactChoice2" name="banner" value="shadow" class="banner" >
+                        <label for="contactChoice2" >shadow</label>
+                        <input type="radio" id="contactChoice3" name="banner" value="thinkertoy" class="banner" >
+                        <label for="contactChoice3" >thinkertoy</label>    
+                    </div>
+                    <div class="inputword">
+                        <label for="inputText">Input word:</label><br>
+                    </div>
+                    <textarea id="inputText" name="word" class="input-text" cols="10" rows="10" required></textarea>
+                </div>
+                <div class = "submit-button-section">
+                    <input type="submit" value="Submit" class="submit">
+                </div>
+              </form> 
+        </div>
+        <div class="output">
+            <pre class="pre-result">{{.}}</pre>
+        </div>
+    </body>
+</html> 
 
-    
-</body>
-</html>

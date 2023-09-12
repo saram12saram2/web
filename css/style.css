@@ -1,48 +1,131 @@
-html, body {
-    height: 100%;
+
+ 
+@import url('https://fonts.googleapis.com/css2?family=Cutive+Mono&display=swap');
+
+
+/* Base styles */
+body {
     margin: 0;
     padding: 0;
-    overflow: hidden;
-}
-
-form {
-    max-width: 600px;
-    margin: 0 auto;
-}
-.body_main {
+    background-image: url('https://cdna.artstation.com/p/assets/images/images/005/271/052/large/ryan-phillips-trapped.jpg?1489783845');
     background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    background-image: url("../../pictures/homepage.jpg")
+    background-attachment: fixed;
+    font-family: 'Cutive Mono', monospace;
+    color: #FFFFFF;
+    overflow-x: hidden;
+    cursor: url('spaceship.png'), auto;
 }
 
-.head, 
-.maintxt {
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.6);
+    border-radius: 10px;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+/* Header styles */
+.head-title h1 {
     text-align: center;
+    font-size: 5rem;
+    color: #65adff; /* Cyan */
+    animation: neon 5s infinite alternate; 
+    background: rgba(0, 0, 0, 0); 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); 
+}
+
+/* Animation */
+@keyframes neon {
+    0% {
+        text-shadow: 0 0 5px #756aa7, 0 0 10px #756aa7, 0 0 15px #2e337a, 0 0 20px #2e337a, 0 0 25px #b671b6, 0 0 30px #b671b6, 0 0 35px #b671b6;
+    }
+    100% {
+        text-shadow: 0 0 10px #756aa7, 0 0 20px #756aa7, 0 0 30px #2e337a, 0 0 40px #2e337a, 0 0 50px #b671b6, 0 0 60px #b671b6, 0 0 70px #b671b6;
+    }
+}
+
+/* Form styles */
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.form-section {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.radio {
+    margin-bottom: 10px;
+}
+
+.radio input[type="radio"] {
+    margin-right: 10px;
+}
+
+.radio label {
+    font-size: 1.4rem;
+    color: #88419e; 
+    margin-right: 20px;
+}
+
+.inputword label {
+    font-size: 1.5rem;
+    color: #57b5f3;  
+    margin-bottom: 20px;
+}
+
+.input-text {
+    width: 100%;
+    padding: 20px;
+    font-size: 1.3rem;
+    border: 1px solid #2f74ac;
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.1); 
     color: #fff;
 }
 
-.text_input {
-    width: 100%;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 20px;
-    box-sizing: border-box;
-}
-.text_input:hover {
-    box-shadow: 5px 50 px 10 px 10 px #ccc;
-}
-
-.buttons {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 10px;
-    margin: 0 auto;
-    
+.submit-button-section {
     margin-top: 20px;
 }
 
+.submit {
+    padding: 15px 40px;
+    font-size: 1.5rem;
+    background: linear-gradient(90deg, #1c3f74, #680181);
+    color: rgb(117, 160, 218);
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.submit:hover {
+    background: linear-gradient(90deg, #422400, #33285a);
+}
+
+/* Output styles */
+.output {
+    margin-top: 20px;
+}
+
+.pre-result {
+    font-family: 'Cutive Mono', monospace;;
+    font-size: 1rem;
+    white-space: pre-wrap;
+    border: 1px solid #2f74ac;
+    border-radius: 20px;  
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.1);
+    color: #ADFF2F; /* Green-yellow */
+}
+
+/* ignore */
+.custom-cursor {
+    cursor: url('spaceship.png'), auto;
+}
