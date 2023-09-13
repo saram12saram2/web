@@ -21,7 +21,7 @@ func main() {
 	fmt.Println("Server is listening...")
 	fileServer := http.FileServer(http.Dir("./css/"))
 	mux.Handle("/css/", http.StripPrefix("/css/", fileServer))
-	err := http.ListenAndServe(":8080", mux)
+	err := http.ListenAndServe(":8085", mux)
 	if err != nil {
 		log.Fatal(err)
 	}
